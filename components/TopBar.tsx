@@ -32,7 +32,7 @@ export default function TopBar() {
     >
       <div className="container-page flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3">
-          <LogoMark size={100} />
+          <LogoMark size={80} />
           <span className="text-white font-bold text-lg hidden sm:block">
             Brine Sea Marine Solutions
           </span>
