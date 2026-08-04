@@ -7,7 +7,7 @@ export default function LogoMark({ size = 52 }: { size?: number }) {
       style={{ width: size, height: size }}
     >
       <Image
-        src="/logo.png"
+        src="/logo.jpeg"
         alt="Brine Sea Marine Solutions"
         width={size}
         height={size}
