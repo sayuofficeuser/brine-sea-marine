@@ -30,7 +30,7 @@ export default function VisionMission() {
           href="/about"
           className="mt-8 inline-block border border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-navy transition-colors"
         >
-          Read More About Us
+          Go to Top
         </Link>
       </div>
     </section>

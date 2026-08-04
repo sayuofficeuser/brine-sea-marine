@@ -5,28 +5,28 @@ import Image from "next/image";
 
 const SLIDES = [
   {
-    kicker: "MARINE ENGINEERING",
-    headline: "SAFE OPERATIONS. FAST TURNAROUND. TRUSTED SUPPORT.",
+    kicker: "",
+    headline: "SAFE OPERATIONS; FAST TURNAROUND; TRUSTED SUPPORT;",
     description:
-      "One contract instead of many vendors — engineering-led ship repair, chandling and consultancy across Colombo, Hambantota, Galle and Trincomalee.",
+      "One contract instead of many vendors ,Engineering-led ship repair, Chandling and consultancy across Colombo, Hambantota, Galle and Trincomalee.",
     image: "/hero-1.jpg",
   },
   {
-    kicker: "SHIP CHANDLING & SPARES",
+    kicker: "",
     headline: "EVERYTHING YOUR VESSEL NEEDS, ON TIME.",
     description:
       "Reliable port-call supply chains built for shipping lines and shipowners.",
     image: "/hero-2.jpg",
   },
   {
-    kicker: "24/7 SUPPORT",
+    kicker: "",
     headline: "READY WHEN YOUR FLEET NEEDS US.",
     description:
-      "Round-the-clock technical and emergency response across the Indian Ocean corridor.",
+      "Round the clock technical and emergency response across the Indian Ocean corridor.",
     image: "/hero-3.jpg",
   },
   {
-    kicker: "CONSULTANCY",
+    kicker: "",
     headline: "EXPERTISE THAT PROTECTS YOUR ASSETS.",
     description:
       "Independent marine consultancy for owners, operators and government agencies.",
@@ -62,10 +62,10 @@ export default function HeroSlider() {
 
       <div className="relative container-page pb-20 pt-40">
         <p className="eyebrow">{slide.kicker}</p>
-        <h1 className="text-4xl md:text-6xl font-extrabold max-w-3xl leading-tight">
-          {slide.headline}
-        </h1>
-        <p className="text-white/75 max-w-xl mt-6 text-lg">{slide.description}</p>
+        <h1 className="text-4xl md:text-6xl font-extrabold max-w-3xl leading-tight text-black">
+  {slide.headline}
+</h1>
+        <p className="text-white max-w-xl mt-6 text-lg">{slide.description}</p>
         <div className="flex flex-wrap gap-4 mt-8">
           <Link href="/contact" className="btn-primary">
             Request a Proposal
@@ -80,7 +80,7 @@ export default function HeroSlider() {
               key={i}
               onClick={() => setActive(i)}
               className={`h-1.5 rounded-full transition-all ${
-                i === active ? "w-8 bg-accent" : "w-4 bg-white/30"
+                i === active ? "w-8 bg-accent" : "w-4 bg-white"
               }`}
               aria-label={`Slide ${i + 1}`}
             />
