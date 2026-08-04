@@ -62,7 +62,7 @@ export default function HeroSlider() {
 
       <div className="relative container-page pb-20 pt-40">
         <p className="eyebrow">{slide.kicker}</p>
-        <h1 className="text-4xl md:text-6xl font-extrabold max-w-3xl leading-tight text-black">
+        <h1 className="text-4xl md:text-6xl font-extrabold max-w-3xl leading-tight text-white">
   {slide.headline}
 </h1>
         <p className="text-white max-w-xl mt-6 text-lg">{slide.description}</p>
