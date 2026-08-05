@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { Sora } from "next/font/google";
+
+const sora = Sora({ subsets: ["latin"], weight: ["600", "700"] });
 
 const SERVICES = [
   {
@@ -37,7 +40,9 @@ export default function ServicesGrid() {
               key={s.title}
               className="border-t border-white/15 pt-6 px-4 -mx-4 rounded-lg transition-all duration-300 hover:bg-white/5 hover:-translate-y-1 hover:border-t-accent"
             >
-              <h3 className="font-bold text-lg mb-2">{s.title}</h3>
+              <h3 className={`${sora.className} font-bold text-2xl md:text-3xl mb-3 leading-tight`}>
+                {s.title}
+              </h3>
               <p className="text-white/65 text-sm mb-4">{s.desc}</p>
               <Link
                 href={s.href}

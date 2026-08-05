@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import LogoMark from "./LogoMark";
 
 const NAV_LINKS = [
@@ -17,6 +19,7 @@ const NAV_LINKS = [
 export default function TopBar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -39,15 +42,24 @@ export default function TopBar() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-white/85 hover:text-white text-sm font-semibold transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link key={link.href} href={link.href}>
+                <motion.span
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                  className={`inline-block text-sm font-semibold transition-colors ${
+                    isActive
+                      ? "text-yellow-400"
+                      : "text-white/85 hover:text-white hover:[filter:drop-shadow(0_0_6px_rgba(255,255,255,0.8))]"
+                  }`}
+                >
+                  {link.label}
+                </motion.span>
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">
@@ -74,16 +86,21 @@ export default function TopBar() {
 
       {open && (
         <div className="lg:hidden bg-navy border-t border-white/10 px-6 pb-6">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="block py-3 text-white/85 hover:text-white text-sm font-semibold border-b border-white/10"
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={`block py-3 text-sm font-semibold border-b border-white/10 ${
+                  isActive ? "text-yellow-400" : "text-white/85 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link href="/contact" className="btn-primary text-sm inline-block mt-4">
             Contact Us
           </Link>
