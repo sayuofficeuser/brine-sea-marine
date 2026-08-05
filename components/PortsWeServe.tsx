@@ -1,4 +1,11 @@
-const PORTS = ["Colombo", "Hambantota", "Galle", "Trincomalee"];
+import Image from "next/image";
+
+const PORTS = [
+  { name: "Colombo", image: "/images/ports/colombo.jpg" },
+  { name: "Hambantota", image: "/images/ports/hambantota.jpg" },
+  { name: "Galle", image: "/images/ports/galle.jpg" },
+  { name: "Trincomalee", image: "/images/ports/trincomalee.jpg" },
+];
 
 export default function PortsWeServe() {
   return (
@@ -11,10 +18,18 @@ export default function PortsWeServe() {
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
           {PORTS.map((port) => (
             <div
-              key={port}
-              className="card text-center hover:border-accent transition-colors"
+              key={port.name}
+              className="card overflow-hidden text-center hover:border-accent transition-colors"
             >
-              <h3 className="font-bold text-navy">{port}</h3>
+              <div className="relative h-32 w-full -mx-5 -mt-5 mb-4" style={{ width: "calc(100% + 2.5rem)" }}>
+                <Image
+                  src={port.image}
+                  alt={`${port.name} port`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="font-bold text-navy">{port.name}</h3>
               <p className="text-muted text-xs mt-1">Port of Sri Lanka</p>
             </div>
           ))}
