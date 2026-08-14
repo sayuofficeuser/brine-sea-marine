@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="container-page grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-bold text-navy mb-4">Our Company</h2>
-            <p className="text-muted leading-relaxed">
+            <p className="text-black leading-relaxed">
               We work with shipping lines, shipowners, port authorities,
               offshore and oil &amp; gas operators, government and navy
               clients, and fisheries operators across Colombo, Hambantota,
@@ -36,11 +36,11 @@ export default function AboutPage() {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-navy mb-4">Our Approach</h2>
-            <p className="text-muted leading-relaxed">
+            <p className="text-black leading-relaxed">
               Every engagement starts with an engineering assessment, not a
               quote. That means the scope of work reflects what the vessel
               actually needs, priced transparently, and delivered by people
-              who understand marine systems — not just logistics.
+              who understand marine systems-not just logistics.
             </p>
           </div>
         </div>
