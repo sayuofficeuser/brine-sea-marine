@@ -12,7 +12,7 @@ export default function ContactPage() {
         description="Reach out for a proposal, an urgent technical request, or a general enquiry."
       />
 
-      <section className="section-white !bg-gradient-to-br !from-yellow-200 !via-blue-200 !to-purple-200 py-20">
+      <section className="section-white !bg-gradient-to-br !from-yellow-300 !via-blue-300 !to-purple-200 py-60">
         <div className="container-page grid md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}

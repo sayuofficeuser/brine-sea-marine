@@ -22,7 +22,7 @@ export default function GalleryPage() {
         description="A look at our vessels, workshops, and operations."
       />
 
-      <section className="section-white !bg-gradient-to-br !from-yellow-200 !via-blue-200 !to-purple-200 py-20">
+      <section className="section-white !bg-gradient-to-br !from-yellow-300 !via-blue-300 !to-purple-600 py-20">
         <div className="container-page grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {GALLERY_IMAGES.map((src, i) => (
             <motion.div

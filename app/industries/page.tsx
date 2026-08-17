@@ -20,7 +20,7 @@ export default function IndustriesPage() {
         description="We work with organisations that need reliable technical partners, not just vendors."
       />
 
-      <section className="section-white !bg-gradient-to-br !from-yellow-200 !via-blue-200 !to-purple-200 py-20">
+      <section className="section-white !bg-gradient-to-br !from-yellow-300 !via-blue-300 !to-purple-600 py-20">
         <div className="container-page grid md:grid-cols-2 gap-x-12 gap-y-10">
           {INDUSTRIES.map((ind, i) => (
             <motion.div
