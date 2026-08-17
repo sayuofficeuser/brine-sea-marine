@@ -31,15 +31,15 @@ export default function ContactPage() {
               </li>
               <li>
                 <span className="font-semibold text-ink block">Phone</span>
-                <span className="italic">+94 11 234 5678</span>
+                <span className="italic">+94 xxxxxxxx</span>
               </li>
               <li>
                 <span className="font-semibold text-ink block">Email</span>
-                <span className="italic">info@brineseamarine.com</span>
+                <span className="italic">info@xxxx.com</span>
               </li>
               <li>
                 <span className="font-semibold text-ink block">WhatsApp</span>
-                <span className="italic">+94 11 234 5678</span>
+                <span className="italic">+94 xxxxxxxx</span>
               </li>
               <li>
                 <span className="font-semibold text-ink block">
