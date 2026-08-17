@@ -1,5 +1,17 @@
+"use client";
+import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import PageHeader from "@/components/PageHeader";
+import { motion } from "framer-motion";
+
+const GALLERY_IMAGES = [
+  "/images/gallery-page/photo-1.jpg",
+  "/images/gallery-page/photo-2.jpg",
+  "/images/gallery-page/photo-3.jpg",
+  "/images/gallery-page/photo-4.jpg",
+  "/images/gallery-page/photo-5.jpg",
+  "/images/gallery-page/photo-6.jpg",
+];
 
 export default function GalleryPage() {
   return (
@@ -7,20 +19,27 @@ export default function GalleryPage() {
       <PageHeader
         eyebrow="GALLERY"
         title="Our work, on site and at sea."
-        description="Real vessel and workshop photography will replace these placeholders once supplied."
+        description="A look at our vessels, workshops, and operations."
       />
 
-      <section className="section-white py-20">
+      <section className="section-white !bg-gradient-to-br !from-yellow-200 !via-blue-200 !to-purple-200 py-20">
         <div className="container-page grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div
+          {GALLERY_IMAGES.map((src, i) => (
+            <motion.div
               key={i}
-              className="h-48 bg-navy-light/10 rounded-md flex items-center justify-center border border-line"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+              className="relative h-48 rounded-md overflow-hidden border border-line"
             >
-              <span className="text-muted text-xs uppercase tracking-wide">
-                Placeholder photo
-              </span>
-            </div>
+              <Image
+                src={src}
+                alt={`Gallery photo ${i + 1}`}
+                fill
+                className="object-cover"
+              />
+            </motion.div>
           ))}
         </div>
       </section>
